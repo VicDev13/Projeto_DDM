@@ -21,42 +21,10 @@ class CadastroActivity : AppCompatActivity() {
             Thread{
                 UsuarioService.saveUsuario(u)
                 runOnUiThread{
-                    val intent = Intent(this, TelaInicialActivity::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 }
             }.start()
         }
     }
 }
-
-
-//override fun onResume() {
-//    super.onResume()
-//    newUsuarios()
-//}
-//
-//fun newUsuarios() {
-//    // Criar a Thread
-//
-//    Thread {
-////             Código para procurar os usuarios
-////             que será executado em segundo plano / Thread separada
-//        botao_cadastro.setOnClickListener{
-//            val botao_cadastro = botao_cadastro.text.toString()
-////                this.usuarios = UsuarioService.saveUsuario(context)
-//        }
-////            this.usuarios = UsuarioService.saveUsuario(context)
-//        runOnUiThread {
-//////                 Código para atualizar a UI com a lista de disciplinas
-////                recyclerDisciplinas?.adapter = DisciplinaAdapter(this.disciplinas) { onClickDisciplina(it) }
-//        }
-//    }.start()
-//
-//}
-//
-////    fun onClickDisciplina(disciplina: Disciplina) {
-////        Toast.makeText(context, "Clicou na disciplina de ${disciplina.nome}", Toast.LENGTH_SHORT).show()
-////        val intent = Intent(context, DisciplinaActivity::class.java)
-////        intent.putExtra("disciplina", disciplina)
-////        startActivity(intent)
-////    }

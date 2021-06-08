@@ -60,12 +60,25 @@
         android:id="@+id/login_cadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/campo_senha"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="125dp"
+        android:layout_alignTop="@+id/campo_senha"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="147dp"
+        android:layout_marginEnd="149dp"
         android:stateListAnimator="@null"
         android:text="Cadastrar"
         android:textAlignment="center" />
+
+    <CheckBox
+        android:id="@+id/checkLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="239dp"
+        android:layout_marginBottom="193dp"
+        android:buttonTint="#FFFFFF"
+        android:text="Lembrar login"
+        android:textColor="#FFFFFF" />
 
     <ProgressBar
         android:id="@+id/progress_login"
@@ -80,6 +93,5 @@
         android:layout_marginTop="22dp"
         android:layout_marginEnd="125dp"
         android:layout_marginBottom="2dp" />
-
 
 </RelativeLayout>

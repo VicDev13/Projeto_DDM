@@ -18,10 +18,24 @@ object UsuarioService {
         return parseJson<List<Usuario>>(json)
     }
 
+    fun getUsuario(nome: String):Usuario? {
+        val url = "$host/usuarios/$nome"
+        val json = HttpHelper.get(url)
+
+        Log.d(TAG, json)
+
+        if (json.equals("Usuario nao existe")){
+            return null
+        }
+        
+        return parseJson<Usuario>(json)
+    }
+
     fun saveUsuario(usuario: Usuario) : String {
         val json = HttpHelper.post("$host/usuarios", usuario.toJson())
         return json
     }
+
 
     inline fun <reified T> parseJson(json: String) : T {
         val type = object: TypeToken<T>(){}.type
