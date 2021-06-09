@@ -64,4 +64,19 @@
         app:layout_constraintTop_toBottomOf="@+id/senha_usuario"
         app:layout_constraintVertical_bias="0.42" />
 
+    <ProgressBar
+        android:id="@+id/progress_salvar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="47dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/senha_usuario"
+        android:layout_alignStart="@+id/botao_cadastro"
+        android:layout_alignEnd="@+id/botao_cadastro"
+        android:layout_alignBottom="@+id/botao_cadastro"
+        app:layout_constraintBottom_toBottomOf="@+id/botao_cadastro"
+        app:layout_constraintEnd_toEndOf="@+id/botao_cadastro"
+        app:layout_constraintStart_toStartOf="@+id/botao_cadastro"
+        app:layout_constraintTop_toBottomOf="@+id/senha_usuario"
+        app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
