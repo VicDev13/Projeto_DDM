@@ -2,8 +2,10 @@ package br.com.ddm.hogwartshistories
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_cadastro.*
+import kotlinx.android.synthetic.main.toolbar.*
 
 class CadastroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,5 +28,15 @@ class CadastroActivity : AppCompatActivity() {
                 }
             }.start()
         }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item?.itemId
+
+        if (id == android.R.id.home) {
+                finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
